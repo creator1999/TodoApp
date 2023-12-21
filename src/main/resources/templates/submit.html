@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Sherry</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Sherry', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h2 {
+            color: #e50914;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+            border: 2px solid #e50914;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            background-color: #e50914;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Adding some animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2, p, input, button {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<h2>Heaven Land</h2>
+<p>Welcome to Pranay Land Sherry</p>
+<input type="text" placeholder="Enter Your Problem for Batman">
+<button onclick="submitProblem()">Submit</button>
+
+<script>
+        function submitProblem() {
+            var problem = document.querySelector('input').value;
+            alert("Your problem for Batman: " + problem);
+            // You can perform further actions here, such as sending the problem to the server.
+        }
+    </script>
+</body>
+</html>
